@@ -3,7 +3,7 @@
 	width:700;
 	background-color:white;
 	border-color:3f3f44;
-	color:grey;
+	color:black;
 	border-radius:9px;
 	font-size: 1.2em;
 	display: block;
@@ -14,7 +14,7 @@
 	background-color:white;
 }
 .beta{
-	margin-top: -120;
+	margin-top: -50;
 	text-align: center;
 	font-family: 'Architects Daughter', cursive;
 	font-size: 45;
@@ -26,10 +26,11 @@ body{
 }
 .logo{
 	display: block;
-	padding: 50px;
+	padding: 20px;
 	
 	margin-right: auto;
 	margin-left: auto;
+	margin-top: 70;
 }
 .white {
 	background-color:white;
