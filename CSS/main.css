@@ -325,15 +325,18 @@ footer{
     border-top: 0;
 }
 .wipedata{
+	display: block;
 	width: 200;
 	height: 40;
 	font-size: 15;
 	border: none;
 	border-radius: 15px;
 	text-align: center;
-	margin-left: 30;
-	margin-top: 50;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15;
 	background-color: 3f3f44;
+	color:white;
 }
 .wipedata:hover{
 	background-color: f03030;
