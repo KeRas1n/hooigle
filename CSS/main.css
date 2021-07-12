@@ -454,5 +454,9 @@ footer{
   top: -10px;
 }
 .icons{
-	width: 50px;
+	.icons{
+	width: 40px;
+	margin-left: -30;
+	margin-bottom: 20;
+}
 }
