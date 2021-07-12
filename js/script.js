@@ -7,6 +7,7 @@ var IsLen = localStorage.length;
 			var str = string;
 			var app = document.querySelector('.app')
 			var title = document.createElement("a"); 
+			var img = document.createElement("img"); 
 			
 			
 			if (localStorage.getItem(key).indexOf('www') > -1)
@@ -15,6 +16,12 @@ var IsLen = localStorage.length;
 				title.setAttribute('href', localStorage.getItem(key));
 				title.className = 'title'
 				app.appendChild(title)
+
+				/*IMAGE*/
+				img.setAttribute('src', "https://www.google.com/s2/favicons?domain=" + localStorage.getItem(key));
+				img.className = 'icons'
+				app.appendChild(img)
+
 		  		
 			}
 			

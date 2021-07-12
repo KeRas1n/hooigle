@@ -453,3 +453,6 @@ footer{
   -webkit-transform: rotate(-45deg);
   top: -10px;
 }
+.icons{
+	width: 50px;
+}
