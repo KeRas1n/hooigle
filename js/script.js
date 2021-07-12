@@ -99,3 +99,24 @@ function showTasks(){
 function wipedata(){
 	localStorage.clear(); 
 }
+
+function setSearch($value) {
+  /*var selectBox = document.getElementById("selectBox");*/
+  if ($value === "Duck") {
+  	document.getElementById("searchTxt").action = "https://duckduckgo.com/?q";
+  }
+  if ($value === "Google") {
+  	document.getElementById("searchTxt").action = "https://www.google.com/search";
+  }
+  if ($value === "Yahoo") {
+  	document.getElementById("searchTxt").action = "https://search.yahoo.com/search?p";
+  }
+  if ($value === "Mailru") {
+  	document.getElementById("searchTxt").action = "https://go.mail.ru/search?q";
+  }
+  if ($value === "Ukrnet") {
+  	document.getElementById("searchTxt").action = "https://search.ukr.net/?q";
+  }
+  
+
+}
