@@ -4,7 +4,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="CSS/main.css">
 <title>HOOIGLE</title>
-        <div class="dropdown">
+   
+   <div class="dropdown">
   <img src="logo/menu.png" class = "menu"class="dropbtn">
   <div class="dropdown-content">
     <a href = "https://translate.google.com"><img src="img/translate.png" class = "menulink"></a>
@@ -13,28 +14,62 @@
     <a href="https://www.google.com/maps"><img src="img/maps.png" class = "menulink"></a>
   </div>
 </div> 
+
+<div class="dropdown" class = "settingsbtn">
+  <img src="img/settings.png" class = "settingsbtn">
+  <div class="dropdown-content">
+    <a href = "https://translate.google.com"><img src="translate.png" class = "menulink"></a>
+
+  </div>
+</div> 
+    
     <img class = "logo" src="logo/logo.png" width = 500 >
-    <h1 class = "beta">BETA 1.3</h1>
+    <h1 class = "beta">BETA 1.4</h1>
     <div>
 </div>
     
 </head>
 <body>
-<form action="https://www.google.com/search" method="get"  >
+<form name="searchTxt" action="https://www.google.com/search" method="get"  >
     <input placeholder="Введите поисковый запрос" id = "searchtext" type="text" name="q"/ >
 </form>
-  	<a href="faq.html" class = "link"> Как установить в браузер?</a>
-	<div>
-		<button id ="toggleThemeBtn" class = "theme">СМЕНИТЬ ТЕМУ НА СВЕТЛУЮ</button>
+	<div class = "app">
+		
+		<a href="#openModal"><button class = "addico"> + </button></a>
+	</div>
+	
+	<div class = "linkbar">
+		<a href="faq.html" class = "link"> Как установить в браузер?</a>
+  		<a href="chto-novogo.html" class = "link"> Что нового?</a>
+		<button id ="toggleThemeBtn" class = "theme">СМЕНИТЬ ТЕМУ</button>
 	</div>
 	<script src = "js/script.js"></script>
+  </head>
+ 
+  <body>
+   
+<div id="openModal" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Добавить ярлык</h3>
+        <a href="#close" title="Close" class="close">×</a>
+      </div>
+      <div class="modal-body">    
+        <input class="addurlform" type="text" id="urlinput" placeholder="URL"><br>
+		<input class="addurlform" type="text" id="urltitle" placeholder="name"><br>
+		<button class = "addico" onclick="addobj()"> + </button>
+      </div>
+    </div>
+  </div>
+</div>
+<button class = "wipedata" onclick="wipedata()"> Стереть все данные (ярлыки и тема)</button>
 </body>
 <footer>
-	
-
 
 	Автор не несёт ответственности за содержание сторонних ссылок.
   	<br>Все права защищены<br>©HOOIGLE 2021
 </footer>
+
 
 
