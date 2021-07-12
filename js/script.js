@@ -58,7 +58,8 @@ function addobj(){
 	var href = document.getElementById("urltitle").value;
 	var string = document.getElementById("urlinput").value;
 	var app = document.querySelector('.app')
-	var title = document.createElement("a");   
+	var title = document.createElement("a");
+	var img = document.createElement("img");    
 	
 	
 	title.setAttribute('href', string);
@@ -80,29 +81,18 @@ function addobj(){
 	app.appendChild(title)
 	
    	localStorage.setItem(href, title);
+   	/*IMAGE*/
+	img.setAttribute('src', "https://www.google.com/s2/favicons?domain=" + string);
+	img.className = 'icons'
+	app.appendChild(img)
+	document.getElementById("urltitle").value = "";
+	document.getElementById("urlinput").value = "";
 	/*urlinput.select();
 
   /* Copy the text inside the text field */
  /* document.execCommand("copy");*/
 }
-function showTasks(){
-	var IsLen = localStorage.length;
-	if(IsLen > 1){
-		for (var i = 0; i < IsLen; i++) {
-			var key = localStorage.key(i);
-			var href = key;
-			var string = localStorage.getItem(tits);
-			var str = string;
-			var app = document.querySelector('.app')
-			var title = document.createElement("a"); 
-			
-			title.innerText = href
-			title.setAttribute('href', str);
-			title.className = 'title'
-			app.appendChild(title)
-		}
-	}
-}
+
 function wipedata(){
 	localStorage.clear(); 
 }
