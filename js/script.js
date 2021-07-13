@@ -1,3 +1,8 @@
+
+document.querySelector('body').style.backgroundImage = 'url('+ localStorage.getItem('customimg') + ')';
+
+
+
 var IsLen = localStorage.length;
 	if(IsLen > 1){
 		for (var i = 0; i < IsLen; i++) {
@@ -10,7 +15,7 @@ var IsLen = localStorage.length;
 			var img = document.createElement("img"); 
 			
 			
-			if (localStorage.getItem(key).indexOf('www') > -1)
+			if (localStorage.getItem(key).indexOf('https://www.') > -1)
 			{
 		  		title.innerText = href
 				title.setAttribute('href', localStorage.getItem(key));
@@ -95,6 +100,7 @@ function addobj(){
 
 function wipedata(){
 	localStorage.clear(); 
+	location.reload();
 }
 
 function setSearch($value) {
@@ -116,4 +122,21 @@ function setSearch($value) {
   }
   
 
+}
+
+function previewFile() {
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
+  var customimg = 'customimg';
+
+  reader.onloadend = function () {
+    document.querySelector('body').style.backgroundImage = 'url('+ reader.result + ')';
+    localStorage.setItem(customimg, reader.result);
+  }
+
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
+    preview.src = "";
+  }
 }

@@ -22,7 +22,10 @@
 }
 body{
 	color:white;
+	background-image: url("");
+	/*background:no-repeat;*/
 	background-color: #2A2A2E;
+
 
 }
 .logo{
@@ -84,6 +87,7 @@ body{
     border: none;
     margin-left: 0;
     margin-right: auto;
+    background-image: url("img/edit.png");
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -458,4 +462,22 @@ footer{
 	width: 40px;
 	margin-left: -30;
 	margin-bottom: 20;
+}
+.editbtn{
+	width: 28;
+}
+.upload{
+	border-radius: 15px;
+	border: none;
+	background-color: black;
+	padding: 10;
+}
+.upload:hover{
+	background-color: grey;
+}
+.upload:active{
+	background-color: red;
+}
+input[type="file"] {
+    margin-top: 15;
 }

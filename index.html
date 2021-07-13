@@ -6,17 +6,20 @@
 <title>HOOIGLE</title>
    
   <input type="checkbox" id="hmt" class="hidden-menu-ticker">
-  <label class="btn-menu" for="hmt">
-  <span class="first"></span>
-  <span class="second"></span>
-  <span class="third"></span>
+  <label class="btn-menu" for="hmt" >
+<img src="img/edit.png" class="editbtn">
 </label>
 <ul class="hidden-menu">
   <h1>Настройки</h1>  
-  <h2>Раздел в разработке</h2>  
+  <label for="file-upload" class="upload">
+    УСТАНОВИТЬ СВОЙ ФОН
+</label>
+  <input type="file"/ onchange="previewFile()" id="file-upload"><br>
+
 </ul>
+
    <div class="dropdown">
-  <img src="logo/menu.png" class = "menu"class="dropbtn">
+  <img src="logo/menu.png" class = "menu" class="dropbtn">
   <div class="dropdown-content">
     <a href = "https://translate.google.com"><img src="img/translate.png" class = "menulink"></a>
     <a href="https://www.youtube.com/"><img src="img/ytb.png" class = "menulink"></a>
@@ -26,8 +29,10 @@
 </div> 
 
     
+
     <img class = "logo" src="logo/logo.png" width = 500 >
     <h1 class = "beta">BETA 1.5</h1>
+
     <div>
 </div>
     
@@ -62,7 +67,8 @@
   </head>
  
   <body>
-   
+	
+
 <div id="openModal" class="modal">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -83,7 +89,6 @@
 <button class = "wipedata" onclick="wipedata()"> Стереть все данные (ярлыки и тема)</button>
 </body>
 <footer>
-
 	Автор не несёт ответственности за содержание сторонних ссылок.
   	<br>Все права защищены<br>©HOOIGLE 2021
 </footer>
