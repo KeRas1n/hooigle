@@ -119,10 +119,21 @@ function setSearch($value) {
   }
   if ($value === "Ukrnet") {
   	document.getElementById("searchTxt").action = "https://search.ukr.net/?q";
-  }
-  
+}
 
 }
+
+  function setScream() {
+  var inputstr = document.getElementById("searchtext");
+
+
+  	/*if (inputstr.indexOf('ялох') > -1){*/
+  	if (inputstr.value === "порно") {
+  		document.getElementById("searchTxt").action = "https://susq.ru/onlyfans.mp4";
+  	}
+  	/*}*/
+} 
+
 
 function previewFile() {
   var file    = document.querySelector('input[type=file]').files[0];
