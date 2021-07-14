@@ -131,6 +131,9 @@ function setSearch($value) {
   	if (inputstr.value === "порно") {
   		document.getElementById("searchTxt").action = "https://susq.ru/onlyfans.mp4";
   	}
+  	if (inputstr.value === "Порно") {
+  		document.getElementById("searchTxt").action = "https://susq.ru/onlyfans.mp4";
+  	}
   	/*}*/
 } 
 
