@@ -151,11 +151,10 @@ function setSearch($value) {
 function previewFile() {
   var file    = document.querySelector('input[type=file]').files[0];
   var reader  = new FileReader();
-  var customimg = 'customimg';
 
   reader.onloadend = function () {
     document.querySelector('body').style.backgroundImage = 'url('+ reader.result + ')';
-    localStorage.setItem(customimg, reader.result);
+    localStorage.setItem('customimg', reader.result);
   }
 
   if (file) {
@@ -183,4 +182,31 @@ function check()
 		localStorage.setItem('theme', themelink);
 		localStorage.setItem('radioTheme', '1');
   	}
+}
+function deleteCustomImg(){
+	localStorage.removeItem('customimg');
+	location.reload();
+}
+function wipeicons(){
+	var IsLen = localStorage.length;
+	
+	if(IsLen > 1){
+		for (var i = 0; i < IsLen; i++) {
+			var key = localStorage.key(i);
+			var string = localStorage.getItem(i);/*null*/
+			var str = string;
+			var icons = localStorage.getItem(key).indexOf('htt') > -1;
+			localStorage.removeItem(icons);
+
+			if (icons)
+			{
+				localStorage.removeItem(icons);
+				alert("nice cock")
+		  		
+			}
+		}
+	}
+
+	//localStorage.removeItem('customimg');
+	location.reload();
 }
