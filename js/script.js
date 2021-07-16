@@ -1,3 +1,9 @@
+var option =document.getElementsByName("r");
+  	option[localStorage.getItem('radioTheme')].checked = true;
+
+if (!localStorage.theme) localStorage.theme = "CSS/main.css"
+var csslink = document.getElementById("theme");
+	csslink.setAttribute('href', localStorage.getItem('theme'));
 
 document.querySelector('body').style.backgroundImage = 'url('+ localStorage.getItem('customimg') + ')';
 
@@ -15,7 +21,7 @@ var IsLen = localStorage.length;
 			var img = document.createElement("img"); 
 			
 			
-			if (localStorage.getItem(key).indexOf('https://www.') > -1)
+			if (localStorage.getItem(key).indexOf('htt') > -1)
 			{
 		  		title.innerText = href
 				title.setAttribute('href', localStorage.getItem(key));
@@ -34,7 +40,7 @@ var IsLen = localStorage.length;
 		}
 	}
 
-var nId = 0;
+/*var nId = 0;
 if (!localStorage.theme) localStorage.theme = "black"
 document.body.className = localStorage.theme
 
@@ -42,7 +48,25 @@ toggleThemeBtn.onclick = () => {
 	document.body.classList.toggle("white")
 	toggleThemeBtn.innerText = document.body.classList.contains("white") ?"СМЕНИТЬ ТЕМУ НА ТЁМНУЮ": "СМЕНИТЬ ТЕМУ НА СВЕТЛУЮ"
 	localStorage.theme = document.body.className || "black"
+}*/
+
+function changeThemeLight(){
+
+	var csslink = document.getElementById("theme");
+	var themelink = "CSS/light-theme.css";
+	csslink.setAttribute('href', "CSS/light-theme.css");
+	localStorage.setItem('theme', themelink);
+
 }
+function changeThemeDark(){
+
+	var csslink = document.getElementById("theme");
+	csslink.setAttribute('href', "CSS/main.css");
+	var themelink = "CSS/main.css";
+	localStorage.setItem('theme', themelink);
+
+}
+
 
 function myFunction() {
   /* Get the text field */
@@ -59,7 +83,7 @@ function myFunction() {
 } 
 
 function addobj(){
-	nId  = nId+1;
+	/* СТРИНГ И ХРЕФ ПОМЕНЯНЫ МЕСТАМИ*/
 	var href = document.getElementById("urltitle").value;
 	var string = document.getElementById("urlinput").value;
 	var app = document.querySelector('.app')
@@ -79,19 +103,24 @@ function addobj(){
     return;
 	}
 
+	if (string.indexOf('https://') > -1) {
+		title.innerText = href
 
-	title.innerText = href
 
-
-	app.appendChild(title)
+		app.appendChild(title)
+		
+	   	localStorage.setItem(href, title);
+	   	/*IMAGE*/
+		img.setAttribute('src', "https://www.google.com/s2/favicons?domain=" + string);
+		img.className = 'icons'
+		app.appendChild(img)
+		document.getElementById("urltitle").value = "";
+		document.getElementById("urlinput").value = "";
+	}
+	else 
+		alert('INCORRRECT URL!');
+		return;
 	
-   	localStorage.setItem(href, title);
-   	/*IMAGE*/
-	img.setAttribute('src', "https://www.google.com/s2/favicons?domain=" + string);
-	img.className = 'icons'
-	app.appendChild(img)
-	document.getElementById("urltitle").value = "";
-	document.getElementById("urlinput").value = "";
 	/*urlinput.select();
 
   /* Copy the text inside the text field */
@@ -153,4 +182,24 @@ function previewFile() {
   } else {
     preview.src = "";
   }
+}
+function check()
+{
+	var csslink = document.getElementById("theme");
+    var option =document.getElementsByName("r");
+  	if(option[0].checked){
+    	//1
+		var themelink = "CSS/light-theme.css";
+		csslink.setAttribute('href', "CSS/light-theme.css");
+		localStorage.setItem('theme', themelink);
+		localStorage.setItem('radioTheme', '0');
+  	}
+  	var option=document.getElementsByName("r");
+  	if(option[1].checked){
+    	//2
+		csslink.setAttribute('href', "CSS/main.css");
+		var themelink = "CSS/main.css";
+		localStorage.setItem('theme', themelink);
+		localStorage.setItem('radioTheme', '1');
+  	}
 }

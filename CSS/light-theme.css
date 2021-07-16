@@ -1,9 +1,9 @@
 #searchtext{
 	height:44;
 	width:700;
-	background-color:3f3f44;
+	background-color:white;
 	border-color:3f3f44;
-	color:white;
+	color:black;
 	border-radius:9px;
 	font-size: 1.2em;
 	display: block;
@@ -11,7 +11,9 @@
 	margin-left: auto;
 	box-shadow: 4px 3px 3px black;
 }
-
+.whitesearch{
+	background-color:white;
+}
 .beta{
 	margin-top: -50;
 	text-align: center;
@@ -19,10 +21,10 @@
 	font-size: 45;
 }
 body{
-	color:white;
+	color:black;
 	background-image: url("");
 	/*background:no-repeat;*/
-	background-color: #2A2A2E;
+	background-color: white;
 
 
 }
@@ -62,9 +64,9 @@ body{
 }
 .theme{
 	display: block;
-	background-color: #3f3f44; /* Green */
+	background-color: #d6d6d6; /* Green */
   	border: none;
-  	color: white;
+  	color: black;
   	padding: 15px 32px;
   	text-align: center;
   	text-decoration: none;
@@ -76,7 +78,7 @@ body{
 
 }
 .theme:hover{
-	background-color: grey;
+	background-color: #c7c7c7;
 }
  /*SETTINGS*/
 .setbtn {
@@ -176,9 +178,9 @@ h1{
 
 .text-block {
     display: block;
-	background-color: #3f3f44; 
+	 background-color: #f1f1f1; 
   	border: none;
-  	color: white;
+  	color: black;
   	padding: 15px 32px;
   	text-align: center;
   	text-decoration: none;
@@ -209,7 +211,7 @@ h1{
 footer{
 	margin-top: 90px;
 	text-align: center;
-	color: grey;
+	color: #999;
 }
 .addico{
 	width: 190;
@@ -220,17 +222,17 @@ footer{
 	text-align: center;
 	margin-left: 130;
 	margin-top: 50;
-	background-color: 7d7d7d;
+	background-color: #ededed;
 }
 .addico:hover{
-	color: white;
-	background-color: black; 
+	color: black;
+	background-color: #d6d6d6; 
 }
 .title{/*ЯРЛЫКИ*/
 	margin-left: 10;
-	color:white;
+	color:black;
 	font-size: 26;
-	background-color: 7d7d7d;
+	background-color: #ededed;
 	width: 15px;
 	text-decoration: none;
 	padding: 35px;
@@ -239,8 +241,8 @@ footer{
 
 }
 .title:hover{
-	color: white;
-	background-color: black; 
+	color: black;
+	background-color: d6d6d6; 
 
 }
 
@@ -375,8 +377,8 @@ footer{
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 15;
-	background-color: 3f3f44;
-	color:white;
+	background-color: #d6d6d6;
+
 }
 .wipedata:hover{
 	background-color: f03030;
@@ -391,8 +393,6 @@ footer{
 	margin-right: auto;
 	margin-left: auto;
 	border-color:3f3f44;
-  background-color: 3f3f44;
-  color: white;
 
 }
 .hidden-menu {
@@ -403,7 +403,7 @@ footer{
   margin: 0;
   box-sizing: border-box;
   width: 400px;
-  background-color:#4d4d4d;
+  background-color:#d6d6d6;
   height: 100%;
   top: 0;
   right: -400px;
@@ -417,8 +417,8 @@ footer{
   display: none;
 }
 .btn-menu {
-  color: #fff;
-  background-color: #4d4d4d;
+  color: #d6d6d6;
+  background-color: #d6d6d6;
   padding: 5px;
   position: fixed;
   top: 5px;
@@ -469,7 +469,7 @@ footer{
 .upload{
 	border-radius: 15px;
 	border: none;
-	background-color: black;
+	background-color: white;
 	padding: 10;
 }
 .upload:hover{
@@ -480,9 +480,6 @@ footer{
 }
 input[type="file"] {
     margin-top: 15;
-}
-.radiobtn{
-
 }
 [type=radio] { 
   position: absolute;
