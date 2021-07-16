@@ -1,6 +1,3 @@
-var option =document.getElementsByName("r");
-  	option[localStorage.getItem('radioTheme')].checked = true;
-
 if (!localStorage.theme) localStorage.theme = "CSS/main.css"
 var csslink = document.getElementById("theme");
 	csslink.setAttribute('href', localStorage.getItem('theme'));
@@ -50,22 +47,6 @@ toggleThemeBtn.onclick = () => {
 	localStorage.theme = document.body.className || "black"
 }*/
 
-function changeThemeLight(){
-
-	var csslink = document.getElementById("theme");
-	var themelink = "CSS/light-theme.css";
-	csslink.setAttribute('href', "CSS/light-theme.css");
-	localStorage.setItem('theme', themelink);
-
-}
-function changeThemeDark(){
-
-	var csslink = document.getElementById("theme");
-	csslink.setAttribute('href', "CSS/main.css");
-	var themelink = "CSS/main.css";
-	localStorage.setItem('theme', themelink);
-
-}
 
 
 function myFunction() {
