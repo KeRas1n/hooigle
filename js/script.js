@@ -2,7 +2,7 @@ if (!localStorage.radioTheme) localStorage.radioTheme = "1"
 
 var option = document.getElementsByName("r");
   	option[localStorage.getItem('radioTheme')].checked = true;
-  	
+
 if (!localStorage.theme) localStorage.theme = "CSS/main.css"
 var csslink = document.getElementById("theme");
 	csslink.setAttribute('href', localStorage.getItem('theme'));
@@ -206,7 +206,7 @@ function wipeicons(){
 			if (icons)
 			{
 				localStorage.removeItem(icons);
-				alert("nice cock")
+				alert("nice cock (стирай из меню хули, фича не работает(: ))")
 		  		
 			}
 		}

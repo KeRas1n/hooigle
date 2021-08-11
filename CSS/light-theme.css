@@ -1,6 +1,6 @@
 #searchtext{
 	height:44;
-	width:700;
+	width:500;
 	background-color:white;
 	border-color:3f3f44;
 	color:black;
@@ -10,7 +10,14 @@
 	margin-right: auto;
 	margin-left: auto;
 	box-shadow: 4px 3px 3px black;
+  outline:none;
+  transition: width 0.2s ease-in-out;
 }
+#searchtext:focus{
+  border-color:#456FF6;
+  width:700;
+  transition: width 0.2s ease-in-out;
+  }
 .whitesearch{
 	background-color:white;
 }
@@ -496,4 +503,37 @@ input[type="file"] {
 /* CHECKED STYLES */
 [type=radio]:checked + img {
   outline: 2px solid #f00;
+}
+#urlinput{
+  height: 40px;
+  width: 90px;
+  text-align: center;
+  background-color: #2A2A2E;
+  color: white;
+  border-radius:9px;
+  background-color: black;
+}
+#urlinput:focus{
+  width: 300px;
+  text-align: center;
+  outline:none;
+  transition: width 0.2s ease-in-out;
+  border-color: red;
+}
+
+#urltitle{
+  height: 40px;
+  width: 90px;
+  text-align: center;
+  background-color: #2A2A2E;
+  color: white;
+  border-radius:9px;
+  background-color: black;
+}
+#urltitle:focus{
+  width: 300px;
+  text-align: center;
+  outline:none;
+  transition: width 0.2s ease-in-out;
+  border-color: red;
 }
