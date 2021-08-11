@@ -1,3 +1,6 @@
+document.getElementById(window.name==='reload'?'reload':'searchTxt').focus();
+window.name='reload';
+
 if (!localStorage.radioTheme) localStorage.radioTheme = "1"
 
 var option = document.getElementsByName("r");
