@@ -1,3 +1,6 @@
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
 //RadioTHEME
 if (!localStorage.radioTheme) localStorage.radioTheme = "1"
 var option = document.getElementsByName("r");
