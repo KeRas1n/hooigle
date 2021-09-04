@@ -1,4 +1,29 @@
+a{
+  text-decoration: none;
+}
+.lastupdate{
+  display: block;
+  background-color: #3f3f44; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius:9px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
 
+  width: 70%;
+  top:-1;
+
+}
+
+.widget:hover{
+  border-color: red;
+}
 #searchtext{
 	height:44;
 	width:500;
@@ -35,12 +60,12 @@ body{
 
 }
 .logo{
-	display: block;
+	display: flex;
 	padding: 20px;
 	
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 70;
+	
 }
 .white {
 	background-color:white;
@@ -99,7 +124,7 @@ body{
 /* The container <div> - needed to position the dropdown content */
 .setdown {
     position: relative;
-    display: inline-block;
+    display: block;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -137,7 +162,7 @@ body{
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: block;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -543,3 +568,4 @@ input[type="file"] {
   transition: width 0.2s ease-in-out;
   border-color: red;
 }
+

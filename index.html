@@ -1,5 +1,4 @@
 <head>
-
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, user-scalable=yes">
 <meta name="viewport" content="width=600">
@@ -26,12 +25,17 @@
 <br>
 <div class="text-block">
   ВЫБЕРИТЕ ТЕМУ ИЗ СУЩЕСТВУЮЩИХ
-  <label>
+  <label><br><br>
   <input type="radio" name="r" value=1 onchange="check()" class="radiobtn"><img src="img/lightTheme.png" width="150px">
   </label>
   <label>
   <input type="radio" name="r" value=2 onchange="check()"><img src="img/darkTheme.png" width="150px">
   </label>
+  </div><br>
+  <div class="text-block">
+    ВИДЖЕТЫ<br>
+  <img id = "weather" class="widget" border = "3" src="img/weather-ico.png" onclick="weather()" width="150" style="border-color: ;"><br>
+  Погода
   </div>
   <button class = "wipedata" onclick="wipedata()"> Стереть все данные (ярлыки и тема)</button>
 </ul>
@@ -48,17 +52,20 @@
   </div>
 </div> 
 
-    
+<div style="display:inline-block;"><div id="hidden" style="display:none;margin-bottom: -100;"><script id="weather-forecast-informer" src="https://pogodnik.com/content/js/daily_informer_with_chart.js"></script> </div></div>
 
-    <img class = "logo" src="logo/logo.png" width = 500 >
-    <h1 class = "beta">BETA 1.7.4</h1>
+
+    <img class = "logo" src="logo/logo.png" width = 500>
+    <h1 class = "beta">BETA 1.7.5</h1>
 
     <div>
 </div>
     
 </head>
 <body>
-
+<div class="lastupdate" id="news">Добавлен новый раздел с виджетами, а также виджет погоды! 
+  <a href="https://keras1n.github.io/hooigle.github.io/chto-novogo.html" style="display: ;">Подробнее...</a> 
+  <button onclick="closenews()" style="">X</button></div>
 <div>
 <form id="searchTxt" action="https://www.google.com/search" method="get">
     <input onchange="setScream()" placeholder="Введите поисковый запрос" id = "searchtext" type="text" name="q"/ autofocus value=""/ autocomplete="off">
@@ -86,8 +93,7 @@
   <script type="js/radiobtn-main.js"></script>
  <button class = "wipedata" onclick="wipeicons()"> Стереть ярлыки</button>
 	
-
-<div id="openModal" class="modal">
+  <div id="openModal" class="modal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -95,17 +101,19 @@
         <a href="#close" title="Close" class="close">×</a>
       </div>
       <div class="modal-body">    
-      	<h3>Ссылка:</h3><br>
+        <h3>Ссылка:</h3><br>
         <input class="addurlform" type="text" id="urlinput" placeholder="URL"><br>
         <h3>Имя:</h3><br>
-		<input class="addurlform" type="text" id="urltitle" placeholder="Name"><br>
-		<button class = "addico" onclick="addobj()"> + </button>
+    <input class="addurlform" type="text" id="urltitle" placeholder="Name"><br>
+    <button class = "addico" onclick="addobj()"> + </button>
       </div>
     </div>
   </div>
 </div>
 </body>
+
 <footer>
+
 	Автор не несёт ответственности за содержание сторонних ссылок.
   	<br>Все права защищены<br>©HOOIGLE 2021
 </footer>

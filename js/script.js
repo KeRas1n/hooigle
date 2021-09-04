@@ -1,12 +1,25 @@
+//RadioTHEME
 if (!localStorage.radioTheme) localStorage.radioTheme = "1"
-
 var option = document.getElementsByName("r");
   	option[localStorage.getItem('radioTheme')].checked = true;
+
+//WEATHER
+if (localStorage.getItem('weather') == "yes") {
+    	document.getElementById("hidden").style.display = "block";
+    }
+if (localStorage.getItem('weather') == "yes") {
+		document.getElementById("weather").style.borderColor = "red";
+	}
+//LAST NEWS
+if (localStorage.getItem('lastnews1') == "seen") {
+		document.getElementById("news").style.display = "none";
+	}
 
 if (!localStorage.theme) localStorage.theme = "CSS/main.css"
 var csslink = document.getElementById("theme");
 	csslink.setAttribute('href', localStorage.getItem('theme'));
 
+//BACKGROUND IMAGE
 document.querySelector('body').style.backgroundImage = 'url('+ localStorage.getItem('customimg') + ')';
 
 
@@ -215,3 +228,25 @@ function wipeicons(){
 	//localStorage.removeItem('customimg');
 	location.reload();
 }
+function weather()
+{
+    if (document.getElementById("hidden").style.display == "none") {
+    	document.getElementById("hidden").style.display = "block";
+    	localStorage.setItem('weather', 'yes');
+    	document.getElementById("weather").style.borderColor = "red";
+    }
+    else if (document.getElementById("hidden").style.display == "block") {
+    	document.getElementById("hidden").style.display = "none";
+    	localStorage.setItem('weather', 'no');
+    	document.getElementById("weather").style.borderColor = "";
+    }
+    
+}
+function closenews()
+{
+	document.getElementById("news").style.display = "none";
+	localStorage.setItem('lastnews1', 'seen');
+}
+
+    
+
