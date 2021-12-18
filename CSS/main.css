@@ -1,7 +1,3 @@
-.delbtn{
-  font-size: 35px;
-  display: inline;
-}
 a{
   text-decoration: none;
 }
@@ -28,7 +24,6 @@ a{
 .widget:hover{
   border-color: red;
 }
-
 #searchtext{
 	height:44;
 	width:500;
