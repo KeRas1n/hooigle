@@ -1,6 +1,3 @@
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-}
 //RadioTHEME
 if (!localStorage.radioTheme) localStorage.radioTheme = "1"
 var option = document.getElementsByName("r");
@@ -14,10 +11,11 @@ if (localStorage.getItem('weather') == "yes") {
 		document.getElementById("weather").style.borderColor = "red";
 	}
 //LAST NEWS
-if (localStorage.getItem('lastnews1') == "seen") {
+if (localStorage.getItem('lastnews2') == "seen") {
 		document.getElementById("news").style.display = "none";
+		localStorage.removeItem('lastnews1')
 	}
-
+//THEME
 if (!localStorage.theme) localStorage.theme = "CSS/main.css"
 var csslink = document.getElementById("theme");
 	csslink.setAttribute('href', localStorage.getItem('theme'));
@@ -26,7 +24,7 @@ var csslink = document.getElementById("theme");
 document.querySelector('body').style.backgroundImage = 'url('+ localStorage.getItem('customimg') + ')';
 
 
-
+//Перебор LS
 var IsLen = localStorage.length;
 	if(IsLen > 1){
 		for (var i = 0; i < IsLen; i++) {
@@ -37,11 +35,13 @@ var IsLen = localStorage.length;
 			var app = document.querySelector('.app')
 			var title = document.createElement("a"); 
 			var img = document.createElement("img"); 
+			var delbtn = document.createElement("button");
 			
-			
-			if (localStorage.getItem(key).indexOf('htt') > -1)
+			//Вывод ярлыков
+			if (localStorage.getItem(key).indexOf('http') > -1)
 			{
-		  		title.innerText = href
+				localhref = href
+		  		title.innerText = localhref
 				title.setAttribute('href', localStorage.getItem(key));
 				title.className = 'title'
 				app.appendChild(title)
@@ -51,7 +51,13 @@ var IsLen = localStorage.length;
 				img.className = 'icons'
 				app.appendChild(img)
 
-		  		
+				//Delete-BTN
+				delbtn.className = 'delbtn'
+				app.appendChild(delbtn)
+		  		delbtn.innerText = "🗑"
+		  		delbtn.onclick = function(){localStorage.removeItem(localhref); location.reload();};
+		  		//delbtn.onclick = localStorage.removeItem(href);
+
 			}
 			
 			
@@ -90,32 +96,48 @@ function addobj(){
 	var string = document.getElementById("urlinput").value;
 	var app = document.querySelector('.app')
 	var title = document.createElement("a");
-	var img = document.createElement("img");    
+	var img = document.createElement("img");  
+	var delbtn = document.createElement("button");
+
 	
-	
+	//Присваиваем ярлыку ссылку
 	title.setAttribute('href', string);
+
 	title.className = 'title'
 	
 	if (string === "") {
-    alert("Заполните URL и NAME");
+    alert("Заполните URL");
     return;
 	}
 	if (href === "") {
-    alert("Заполните URL и NAME");
+    alert("Заполните NAME");
     return;
 	}
 
-	if (string.indexOf('https://') > -1) {
+	if (string.indexOf('http') > -1) {
+		//Текст ярлыка = хреф(urltitle)
 		title.innerText = href
 
-
+		//Присваиваем Тайтлу(ссылке) стиль .app(ярлык)
 		app.appendChild(title)
 		
+		//Сохраняем ярылк в LS
 	   	localStorage.setItem(href, title);
-	   	/*IMAGE*/
+
+	   	/*Добавляем фавиконку*/
+
 		img.setAttribute('src', "https://www.google.com/s2/favicons?domain=" + string);
 		img.className = 'icons'
 		app.appendChild(img)
+
+		//deletebtn
+		delbtn.className = 'delbtn'
+		app.appendChild(delbtn)
+		delbtn.innerText = "🗑"
+		delbtn.onclick = function(){localStorage.removeItem(localhref); location.reload();};
+
+
+		//Очищаем поля создания ярлыка
 		document.getElementById("urltitle").value = "";
 		document.getElementById("urlinput").value = "";
 	}
@@ -205,32 +227,17 @@ function check()
   	}
 }
 function deleteCustomImg(){
-	localStorage.removeItem('customimg');
-	location.reload();
-}
-function wipeicons(){
-	var IsLen = localStorage.length;
-	
-	if(IsLen > 1){
-		for (var i = 0; i < IsLen; i++) {
-			var key = localStorage.key(i);
-			var string = localStorage.getItem(i);/*null*/
-			var str = string;
-			var icons = localStorage.getItem(key).indexOf('htt') > -1;
-			localStorage.removeItem(icons);
+	if (localStorage.getItem('customimg') == "") {
+		alert("У вас нет своего фона");
+	}
+	else{
 
-			if (icons)
-			{
-				localStorage.removeItem(icons);
-				alert("nice cock (стирай из меню хули, фича не работает(: ))")
-		  		
-			}
-		}
+	localStorage.setItem('customimg', "");
+	location.reload();
 	}
 
-	//localStorage.removeItem('customimg');
-	location.reload();
 }
+
 function weather()
 {
     if (document.getElementById("hidden").style.display == "none") {
@@ -248,7 +255,7 @@ function weather()
 function closenews()
 {
 	document.getElementById("news").style.display = "none";
-	localStorage.setItem('lastnews1', 'seen');
+	localStorage.setItem('lastnews2', 'seen');
 }
 
     
