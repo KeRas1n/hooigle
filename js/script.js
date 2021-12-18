@@ -42,6 +42,7 @@ var IsLen = localStorage.length;
 			//Вывод ярлыков
 			if (localStorage.getItem(key).indexOf('htt') > -1)
 			{
+		  		localhref = href
 		  		title.innerText = href
 				title.setAttribute('href', localStorage.getItem(key));
 				title.className = 'title'
