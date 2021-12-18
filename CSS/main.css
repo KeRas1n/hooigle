@@ -1,3 +1,7 @@
+.delbtn{
+  font-size: 35px;
+  display: inline;
+}
 a{
   text-decoration: none;
 }
@@ -24,6 +28,7 @@ a{
 .widget:hover{
   border-color: red;
 }
+
 #searchtext{
 	height:44;
 	width:500;
@@ -223,7 +228,11 @@ h1{
 	font-family: 'Roboto', sans-serif;
 }
 .justlink{
-	color:white;
+	color:grey;
+}
+.justlink:hover{
+  text-decoration: underline;
+  color: black;
 }
 #myInput{
 	border-radius: 15px;

@@ -1,3 +1,7 @@
+.delbtn{
+  font-size: 35px;
+  display: inline;
+}
 a{
   text-decoration: none;
 }
@@ -433,7 +437,7 @@ footer{
   margin: 0;
   box-sizing: border-box;
   width: 400px;
-  background-color:#d6d6d6;
+  background-color:ececec;
   height: 100%;
   top: 0;
   right: -400px;
