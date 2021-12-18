@@ -26,7 +26,7 @@ var csslink = document.getElementById("theme");
 document.querySelector('body').style.backgroundImage = 'url('+ localStorage.getItem('customimg') + ')';
 
 
-
+//Перебор LS для нахождения ярлыков
 var IsLen = localStorage.length;
 	if(IsLen > 1){
 		for (var i = 0; i < IsLen; i++) {
@@ -37,8 +37,9 @@ var IsLen = localStorage.length;
 			var app = document.querySelector('.app')
 			var title = document.createElement("a"); 
 			var img = document.createElement("img"); 
+			var delbtn = document.createElement("button");
 			
-			
+			//Вывод ярлыков
 			if (localStorage.getItem(key).indexOf('htt') > -1)
 			{
 		  		title.innerText = href
@@ -51,6 +52,12 @@ var IsLen = localStorage.length;
 				img.className = 'icons'
 				app.appendChild(img)
 
+				//Delete-BTN
+				delbtn.className = 'delbtn'
+				app.appendChild(delbtn)
+		  		delbtn.innerText = "🗑"
+		  		delbtn.onclick = function(){localStorage.removeItem(localhref); location.reload();};
+		  		//delbtn.onclick = localStorage.removeItem(href);
 		  		
 			}
 			
