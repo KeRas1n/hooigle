@@ -2,23 +2,32 @@
 <meta charset="utf-8"> 
 <meta name="viewport" content="width=device-width, user-scalable=yes">
 <meta name="viewport" content="width=600">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="CSS/main.css" id = "theme">
 <title>HOOIGLE</title>
-   
+
+   <style type="text/css">
+     button{
+      cursor: pointer;
+     }
+   </style>
+   </head>
+
   <input type="checkbox" id="hmt" class="hidden-menu-ticker">
   <label class="btn-menu" for="hmt" >
 <img src="img/edit.png" class="editbtn">
 </label>
+
 <ul class="hidden-menu">
   <h1>Персонализация</h1>  
-  
   <label for="file-upload">
     <h3 class="upload">Загрузите свою картинку в качестве фона</h3>
     </label>
-  <input type="file"/ onchange="previewFile()" id="file-upload"><br>
+  <input type="file"/ onchange="previewFile()" id="file-upload" accept="image/*"><br>
   <h5>Поддерживается .gif</h5>
   <button onclick="deleteCustomImg()" class = "wipedata"> Удалить свой фон</button>
   
@@ -56,14 +65,15 @@
 
 
     <img class = "logo" src="logo/logo.png" width = 500>
-    <h1 class = "beta">BETA 1.7.5</h1>
+    <h1 class = "beta">BETA 1.8</h1>
 
     <div>
 </div>
     
-</head>
+
+
 <body>
-<div class="lastupdate" id="news">Добавлен новый раздел с виджетами, а также виджет погоды! 
+<div class="lastupdate" id="news">Глобальное обновление! Появилась возможность удалять ярлыки!
   <a href="https://keras1n.github.io/hooigle.github.io/chto-novogo.html" style="display: ;">Подробнее...</a> 
   <button onclick="closenews()" style="">X</button></div>
 <div>
@@ -89,9 +99,10 @@
 		<a href="faq.html" class = "link"> Как установить в браузер?</a>
   		<a href="chto-novogo.html" class = "link"> Что нового?</a>
 	</div>
+
 	<script src = "js/script.js"></script>
-  <script type="js/radiobtn-main.js"></script>
- <button class = "wipedata" onclick="wipeicons()"> Стереть ярлыки</button>
+  
+ <button class = "wipedata" onclick="wipedata()">Стереть все данные (ярлыки,тема,фон)</button>
 	
   <div id="openModal" class="modal">
   <div class="modal-dialog">
@@ -113,8 +124,9 @@
 </body>
 
 <footer>
+
 	Автор не несёт ответственности за содержание сторонних ссылок.
-	<br>Все права защищены<br><a href = "https://twitch.tv/lingkeras1n" Made by KeRas1n </a><br>©HOOIGLE 2021
+  	<br>Все права защищены<br>©HOOIGLE 2021
 </footer>
 
 
