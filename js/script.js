@@ -1,30 +1,8 @@
-//RadioTHEME
-if (!localStorage.radioTheme) localStorage.radioTheme = "1"
-var option = document.getElementsByName("r");
-  	option[localStorage.getItem('radioTheme')].checked = true;
 
-//WEATHER
-if (localStorage.getItem('weather') == "yes") {
-    	document.getElementById("hidden").style.display = "block";
-    }
-if (localStorage.getItem('weather') == "yes") {
-		document.getElementById("weather").style.borderColor = "red";
-	}
-//LAST NEWS
-if (localStorage.getItem('lastnews2') == "seen") {
-		document.getElementById("news").style.display = "none";
-		localStorage.removeItem('lastnews1')
-	}
-//THEME
-if (!localStorage.theme) localStorage.theme = "CSS/main.css"
-var csslink = document.getElementById("theme");
-	csslink.setAttribute('href', localStorage.getItem('theme'));
-
-//BACKGROUND IMAGE
 document.querySelector('body').style.backgroundImage = 'url('+ localStorage.getItem('customimg') + ')';
 
 
-//Перебор LS
+
 var IsLen = localStorage.length;
 	if(IsLen > 1){
 		for (var i = 0; i < IsLen; i++) {
@@ -35,13 +13,11 @@ var IsLen = localStorage.length;
 			var app = document.querySelector('.app')
 			var title = document.createElement("a"); 
 			var img = document.createElement("img"); 
-			var delbtn = document.createElement("button");
 			
-			//Вывод ярлыков
-			if (localStorage.getItem(key).indexOf('http') > -1)
+			
+			if (localStorage.getItem(key).indexOf('https://www.') > -1)
 			{
-				localhref = href
-		  		title.innerText = localhref
+		  		title.innerText = href
 				title.setAttribute('href', localStorage.getItem(key));
 				title.className = 'title'
 				app.appendChild(title)
@@ -51,20 +27,14 @@ var IsLen = localStorage.length;
 				img.className = 'icons'
 				app.appendChild(img)
 
-				//Delete-BTN
-				delbtn.className = 'delbtn'
-				app.appendChild(delbtn)
-		  		delbtn.innerText = "🗑"
-		  		delbtn.onclick = function(){localStorage.removeItem(localhref); location.reload();};
-		  		//delbtn.onclick = localStorage.removeItem(href);
-
+		  		
 			}
 			
 			
 		}
 	}
 
-/*var nId = 0;
+var nId = 0;
 if (!localStorage.theme) localStorage.theme = "black"
 document.body.className = localStorage.theme
 
@@ -72,9 +42,7 @@ toggleThemeBtn.onclick = () => {
 	document.body.classList.toggle("white")
 	toggleThemeBtn.innerText = document.body.classList.contains("white") ?"СМЕНИТЬ ТЕМУ НА ТЁМНУЮ": "СМЕНИТЬ ТЕМУ НА СВЕТЛУЮ"
 	localStorage.theme = document.body.className || "black"
-}*/
-
-
+}
 
 function myFunction() {
   /* Get the text field */
@@ -91,60 +59,39 @@ function myFunction() {
 } 
 
 function addobj(){
-	/* СТРИНГ И ХРЕФ ПОМЕНЯНЫ МЕСТАМИ*/
+	nId  = nId+1;
 	var href = document.getElementById("urltitle").value;
 	var string = document.getElementById("urlinput").value;
 	var app = document.querySelector('.app')
 	var title = document.createElement("a");
-	var img = document.createElement("img");  
-	var delbtn = document.createElement("button");
-
+	var img = document.createElement("img");    
 	
-	//Присваиваем ярлыку ссылку
+	
 	title.setAttribute('href', string);
-
 	title.className = 'title'
 	
 	if (string === "") {
-    alert("Заполните URL");
+    alert("Заполните URL и NAME");
     return;
 	}
 	if (href === "") {
-    alert("Заполните NAME");
+    alert("Заполните URL и NAME");
     return;
 	}
 
-	if (string.indexOf('http') > -1) {
-		//Текст ярлыка = хреф(urltitle)
-		title.innerText = href
 
-		//Присваиваем Тайтлу(ссылке) стиль .app(ярлык)
-		app.appendChild(title)
-		
-		//Сохраняем ярылк в LS
-	   	localStorage.setItem(href, title);
-
-	   	/*Добавляем фавиконку*/
-
-		img.setAttribute('src', "https://www.google.com/s2/favicons?domain=" + string);
-		img.className = 'icons'
-		app.appendChild(img)
-
-		//deletebtn
-		delbtn.className = 'delbtn'
-		app.appendChild(delbtn)
-		delbtn.innerText = "🗑"
-		delbtn.onclick = function(){localStorage.removeItem(localhref); location.reload();};
+	title.innerText = href
 
 
-		//Очищаем поля создания ярлыка
-		document.getElementById("urltitle").value = "";
-		document.getElementById("urlinput").value = "";
-	}
-	else 
-		alert('INCORRRECT URL!');
-		return;
+	app.appendChild(title)
 	
+   	localStorage.setItem(href, title);
+   	/*IMAGE*/
+	img.setAttribute('src', "https://www.google.com/s2/favicons?domain=" + string);
+	img.className = 'icons'
+	app.appendChild(img)
+	document.getElementById("urltitle").value = "";
+	document.getElementById("urlinput").value = "";
 	/*urlinput.select();
 
   /* Copy the text inside the text field */
@@ -194,10 +141,11 @@ function setSearch($value) {
 function previewFile() {
   var file    = document.querySelector('input[type=file]').files[0];
   var reader  = new FileReader();
+  var customimg = 'customimg';
 
   reader.onloadend = function () {
     document.querySelector('body').style.backgroundImage = 'url('+ reader.result + ')';
-    localStorage.setItem('customimg', reader.result);
+    localStorage.setItem(customimg, reader.result);
   }
 
   if (file) {
@@ -206,57 +154,3 @@ function previewFile() {
     preview.src = "";
   }
 }
-function check()
-{
-	var csslink = document.getElementById("theme");
-    var option =document.getElementsByName("r");
-  	if(option[0].checked){
-    	//1
-		var themelink = "CSS/light-theme.css";
-		csslink.setAttribute('href', "CSS/light-theme.css");
-		localStorage.setItem('theme', themelink);
-		localStorage.setItem('radioTheme', '0');
-  	}
-  	var option=document.getElementsByName("r");
-  	if(option[1].checked){
-    	//2
-		csslink.setAttribute('href', "CSS/main.css");
-		var themelink = "CSS/main.css";
-		localStorage.setItem('theme', themelink);
-		localStorage.setItem('radioTheme', '1');
-  	}
-}
-function deleteCustomImg(){
-	if (localStorage.getItem('customimg') == "") {
-		alert("У вас нет своего фона");
-	}
-	else{
-
-	localStorage.setItem('customimg', "");
-	location.reload();
-	}
-
-}
-
-function weather()
-{
-    if (document.getElementById("hidden").style.display == "none") {
-    	document.getElementById("hidden").style.display = "block";
-    	localStorage.setItem('weather', 'yes');
-    	document.getElementById("weather").style.borderColor = "red";
-    }
-    else if (document.getElementById("hidden").style.display == "block") {
-    	document.getElementById("hidden").style.display = "none";
-    	localStorage.setItem('weather', 'no');
-    	document.getElementById("weather").style.borderColor = "";
-    }
-    
-}
-function closenews()
-{
-	document.getElementById("news").style.display = "none";
-	localStorage.setItem('lastnews2', 'seen');
-}
-
-    
-
