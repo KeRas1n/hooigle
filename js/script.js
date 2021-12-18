@@ -114,16 +114,27 @@ function addobj(){
 	}
 
 	if (string.indexOf('https://') > -1) {
+		//Текст ярлыка = хреф(urltitle)
 		title.innerText = href
 
-
+		//Присваиваем Тайтлу(ссылке) стиль .app(ярлык)
 		app.appendChild(title)
-		
+
+		//Сохраняем ярылк в LS
 	   	localStorage.setItem(href, title);
-	   	/*IMAGE*/
+
+	   	/*Добавляем фавиконку*/
 		img.setAttribute('src', "https://www.google.com/s2/favicons?domain=" + string);
 		img.className = 'icons'
 		app.appendChild(img)
+
+		//deletebtn
+		delbtn.className = 'delbtn'
+		app.appendChild(delbtn)
+		delbtn.innerText = "🗑"
+		delbtn.onclick = function(){localStorage.removeItem(localhref); location.reload();};
+
+		//Очищаем поля создания ярлыка
 		document.getElementById("urltitle").value = "";
 		document.getElementById("urlinput").value = "";
 	}
