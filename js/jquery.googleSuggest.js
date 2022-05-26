@@ -18,7 +18,7 @@ jquery.prototype.googleSuggest = function(opts){
 
   opts.source = function(request, response){
     $.ajax({
-      url: 'https'+(opts.secure?'s':'')+'://clients1.google.com/complete/search',
+      url: 'https'+(opts.secure?'s':'')+'://google.com/complete/search',
       dataType: 'jsonp',
       data: {
         q: request.term,
