@@ -1,0 +1,87 @@
+@media only screen and (max-width: 1200px) {
+	.index_how > h1{
+		font-size: 45px;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.widget-holder{
+		width: 100%;
+	}
+	.widget{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.currency_widget{
+		padding: 12px;
+	}
+	.weather_widget{
+		padding: 20px;
+	}
+	.app{
+		width: 80%;
+	}
+	.block-container{
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	}
+	.block{
+		width: 80%;
+		height: 50%;
+		margin-top: 25px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.modal-content{
+		width: 70%;
+	}
+
+	.index_how > h1{
+		font-size: 35px;
+	}
+	.nopage, #downlBlock  {
+  	width: 70%;
+}
+}
+
+@media only screen and (max-width: 768px) {
+	#searchtext{
+		width: 550;
+	}
+	#searchtext:focus{
+	  width:580;
+	}
+	.index_how > h1{
+		font-size: 25px;
+	}
+
+
+}
+
+@media only screen and (max-width: 600px) {
+	.logo{
+		width: 400px;
+	}
+	.widget-holder{
+		display: block;
+	}
+	.dragndrop-mobile{
+		display: none;
+	}
+	#searchtext{
+		width: 350;
+	}
+	#searchtext:focus{
+	  width:400;
+	  }
+	  .app{
+		width: 95%;
+	}
+	.wave{
+		margin-top: 500px;
+	}
+	.nopage, #downlBlock  {
+  	width: 85%;
+}
+}

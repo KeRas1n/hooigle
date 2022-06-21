@@ -1,0 +1,349 @@
+.delbtn{
+  color: grey;
+}
+.delbtn:hover{
+  color: red;
+}
+
+.lastupdate{
+  background-color: #f1f1f1;
+  color: black;
+
+}
+idget:hover{
+  border-color: red;
+}
+#searchtext{
+  border:0.5px solid #e5e5e5;
+	background-color:white;
+	color:black;
+	transition: linear 0.1s;
+}
+#searchtext:focus{
+  border:0.5px solid #456FF6;
+  }
+#searchtext:hover{
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.real-body{
+	color:black;
+	/*background:no-repeat;*/
+	background-color: white;
+}
+
+.block{
+  background-color: black;
+}
+.index_how{
+  background-color: #0086F8;
+  color: white;
+}
+.index_how > h1{
+  border-right: .17em solid #e29508;
+}
+
+
+
+.white {
+	background-color:white;
+	color: black;
+}
+.link{
+	color:grey;
+
+}
+.link:hover{
+	color:4c4ca1;
+}
+.link:active{
+	color:red;
+}
+.theme{
+	background-color: #d6d6d6; /* Green */
+  	color: black;
+
+}
+.theme:hover{
+	background-color: #c7c7c7;
+}
+ /*SETTINGS*/
+.setbtn {
+    color: white;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.setdown-content {
+    background-color: #f1f1f1;
+}
+
+/* Links inside the dropdown */
+.setdown-content a {
+    color: black;
+}
+
+/* Change color of dropdown links on hover */
+.setdown-content a:hover {background-color: #ddd;}
+
+ /* Dropdown Button */
+.dropbtn {
+    color: white;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    background-color: #f1f1f1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+.text-block {
+	 background-color: white;
+  	color: black;
+}
+.justlink{
+	color:white;
+}
+#myInput{
+	background-color: 575757;
+	color:white;
+}
+.copy:hover{
+	color: white;
+	background-color: black;
+}
+footer{
+	color: #999;
+}
+.addico{
+color: black;
+  background-color: #ededed;
+}
+.addico:hover{
+	color: black;
+	background-color: #d6d6d6;
+}
+.title{/*ЯРЛЫКИ*/
+
+  color:black;
+  background-color: #ededed;
+
+}
+.title:hover{
+	color: black;
+	background-color: d6d6d6;
+
+}
+
+.modal {
+  color: black;
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+ /* Modal Header */
+.modal-header {
+  background-color: #495fc2;
+  color: white;
+}
+
+
+/* Modal Footer */
+.modal-footer {
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  color: black;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+
+/* The Close Button */
+.close {
+  color: #aaa;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+}
+
+
+.wipedata{
+	background-color: #d6d6d6 ;
+	color: black;
+
+}
+.wipedata:hover{
+	background-color: f03030;
+	color: white;
+}
+.chooseSearch{
+	color: black;
+	border:0.5px solid#e5e5e5;
+  background-color: white;
+  transition: linear 0.1s;
+
+
+}
+
+.ultrahref{
+    color: grey;
+  }
+  .ultrahref:hover{
+    color: black;
+  }
+.chooseSearch:hover{
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.hidden-menu {
+  background-color:white;
+}
+
+.btn-menu {
+  color: black;
+}
+
+/* The Modal (background) */
+.modal {
+  color: black;
+
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+ /* Modal Header */
+.modal-header {
+  background-color: #495fc2;
+  color: white;
+}
+
+/* Modal Footer */
+.modal-footer {
+  background-color: #5cb85c;
+  color: white;
+}
+
+
+/* The Close Button */
+.close {
+  color: #aaa;
+
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+
+}
+
+.NiceBtn{
+  background-color: #d6d6d6;
+  color: black;
+  transition: .2s;
+
+}
+.NiceBtn:hover{
+	color: white;
+  background-color: #495fc2;
+  box-shadow: 0 3px 10px #495fc2;
+}
+#get_h:hover{
+	margin-bottom: 25px;
+}
+.upload{
+	background-color: white;
+}
+.upload:hover{
+	background-color: grey;
+}
+.upload:active{
+	background-color: red;
+}
+/*INPUT FILE*/
+.dragndrop{
+  color: #b9b9b9;
+}
+.image-input{
+  }
+  #image-event {
+}
+#image-event-label {
+  position: relative;
+}
+
+#image-event-label.dragged-over {
+  border: 1px solid;
+}
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+}
+
+/* CHECKED STYLES
+[type=radio]:checked + img {
+  outline: 2px solid #f00;
+}
+*/
+
+#urlinput{
+  background-color: white;
+  color: black;
+	border:0.5px solid #e5e5e5;
+}
+#urlinput:focus{
+  border-color: #495fc2;
+}
+
+#urltitle{
+  background-color: white;
+  color: black;
+  border:0.5px solid #e5e5e5;
+}
+#urltitle:focus{
+  border-color: #495fc2;
+}
+/*AUTOCOMPLETE*/
+.ui-widget-content {
+  border-color: #dddddd;
+  background: white;
+  color: #333333;
+}
+.ui-menu-item{
+  background-color: white;
+  color: black;
+}
+
+.ui-menu-item:hover{
+  background-color: #e7e7e7;
+  color: black;
+}
+
+/*TABS*/
+.tab{
+  background-color: #ececec;
+  color: black;
+  border: 1px solid grey;
+}
+.tab button {
+  color: black;
+}
+.tab button:hover {
+    background-color: #ddd;
+}
+.tab button.active {
+    background-color: #ccc;
+}
