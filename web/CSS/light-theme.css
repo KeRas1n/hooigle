@@ -261,9 +261,6 @@ color: black;
   background-color: #495fc2;
   box-shadow: 0 3px 10px #495fc2;
 }
-#get_h:hover{
-	margin-bottom: 25px;
-}
 .upload{
 	background-color: white;
 }
@@ -347,3 +344,19 @@ color: black;
 .tab button.active {
     background-color: #ccc;
 }
+.widget{
+  background-color: #e7e7e79b;
+}
+
+.extra_icon{
+  color: black;
+  background-color: white;
+}
+
+.extra_icon > li > button{
+  color: black;
+}
+.extra_icon > li:hover{
+  background-color: #d6d6d6;
+}
+

@@ -57,9 +57,10 @@ function Currency(){
 
 }
 
+var apiKey = keys.first_w_api;
 
 let pogoda = {
-	apiKey:"9096ff0d0c3025f842533426b9a370a7",
+	apiKey,
 	fetchWeather: function(city){
 
 			fetch("https://api.openweathermap.org/data/2.5/weather?q="
